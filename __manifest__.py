@@ -17,7 +17,7 @@
     'depends': ['sale'],
 
     'data': [
-        'views/sale_order_line.xml',
+        'views/sale_views.xml',
     ],
     'license': 'LGPL-3',
 }
