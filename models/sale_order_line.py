@@ -5,7 +5,7 @@ from odoo import api, fields, models, _
 class SaleOrdeLine(models.Model):
     _inherit = 'sale.order.line'
 
-    total_discount = fields.Float("Total Descuento", store = True)
+    total_discount = fields.Float("Total Descuento",  digits=(16, 3), store = True)
 
     @api.onchange('total_discount')
     def _onchange_total_discount(self):
