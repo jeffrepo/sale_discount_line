@@ -11,5 +11,5 @@ class SaleOrdeLine(models.Model):
     def _onchange_total_discount(self):
         for line in self:
             if line.total_discount > 0:
-                discount = 100 * ( line.price_total - line.total_discount) / line.price_total
+                discount = 100 * (line.total_discount / line.price_total)
                 line.discount = discount
